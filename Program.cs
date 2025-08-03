@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("---------");
             Console.WriteLine("1. Grade Calculator");
             Console.WriteLine("2. Ticket Price Calculator");
-            Console.WriteLine("3. [New Program]"); // Placeholder for future programs
+            Console.WriteLine("3. Triangle Type Identifier");
             Console.WriteLine("0. Exit");
             Console.Write("\nSelect an option (0-3): ");
 
@@ -28,11 +28,8 @@ class Program
                         RunTicketPriceCalculator();
                         break;
                     case 3:
-                        // Placeholder for new program
-                        Console.WriteLine("\nThis program is not implemented yet!");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
-                        break;
+    RunTriangleTypeIdentifier();
+    break;
                     case 0:
                         exit = true;
                         break;
@@ -127,5 +124,64 @@ class Program
     
     Console.WriteLine("\nPress any key to return to main menu...");
     Console.ReadKey();
+}
+static void RunTriangleTypeIdentifier()
+{
+    Console.Clear();
+    Console.WriteLine("Triangle Type Identifier");
+    Console.WriteLine("-------------------------");
+    
+    Console.WriteLine("Enter the lengths of the three sides of the triangle:");
+    
+    if (double.TryParse(GetValidInput("First side: "), out double side1) &&
+        double.TryParse(GetValidInput("Second side: "), out double side2) &&
+        double.TryParse(GetValidInput("Third side: "), out double side3))
+    {
+        if (IsValidTriangle(side1, side2, side3))
+        {
+            string triangleType = DetermineTriangleType(side1, side2, side3);
+            Console.WriteLine($"\nThis is a {triangleType} triangle.");
+        }
+        else
+        {
+            Console.WriteLine("\nThese sides do not form a valid triangle.");
+            Console.WriteLine("The sum of any two sides must be greater than the third side.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("\nError: Please enter valid positive numbers for all sides.");
+    }
+    
+    Console.WriteLine("\nPress any key to return to main menu...");
+    Console.ReadKey();
+}
+
+static string GetValidInput(string prompt)
+{
+    string input;
+    do
+    {
+        Console.Write(prompt);
+        input = Console.ReadLine();
+    } while (string.IsNullOrWhiteSpace(input));
+    return input;
+}
+
+static bool IsValidTriangle(double a, double b, double c)
+{
+    return a > 0 && b > 0 && c > 0 && 
+           a + b > c && 
+           a + c > b && 
+           b + c > a;
+}
+
+static string DetermineTriangleType(double a, double b, double c)
+{
+    if (a == b && b == c)
+        return "Equilateral (all sides equal)";
+    if (a == b || a == c || b == c)
+        return "Isosceles (two sides equal)";
+    return "Scalene (no sides equal)";
 }
 }

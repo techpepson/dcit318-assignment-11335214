@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradeCalculatorApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c7a0abe9375ea58dd336061f11118324eb79b8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9a06d251b3eac83323b9f96e9a699a628c1fe46")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradeCalculatorApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradeCalculatorApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
