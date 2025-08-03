@@ -12,3 +12,4 @@ T:\study\assignments\GradeCalculatorApp\obj\Debug\net8.0\refint\GradeCalculatorA
 T:\study\assignments\GradeCalculatorApp\obj\Debug\net8.0\GradeCalculatorApp.pdb
 T:\study\assignments\GradeCalculatorApp\obj\Debug\net8.0\GradeCalculatorApp.genruntimeconfig.cache
 T:\study\assignments\GradeCalculatorApp\obj\Debug\net8.0\ref\GradeCalculatorApp.dll
+T:\study\assignments\GradeCalculatorApp\obj\Debug\net8.0\GradeCalculatorApp.sourcelink.json
