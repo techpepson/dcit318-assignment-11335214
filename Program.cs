@@ -15,7 +15,7 @@ class Program
             Console.WriteLine("2. Ticket Price Calculator");
             Console.WriteLine("3. Triangle Type Identifier");
             Console.WriteLine("0. Exit");
-            Console.Write("\nSelect an option (0-3): ");
+            Console.Write("\nSelect an option (1-3): ");
 
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
